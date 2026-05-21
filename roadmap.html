@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Growth Roadmap - Monique Radatti | Clinic Catalyst</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Open+Sans:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --teal:#00B4A0;
+  --teal-bright:#00D4BC;
+  --teal-dark:#007A6E;
+  --hero-dark:#0A2A28;
+  --hero-mid:#0D3D38;
+  --dark-section:#0E2D2A;
+  --white:#FFFFFF;
+  --off-white:#F4F4F4;
+  --light-gray:#EBEBEB;
+  --text-dark:#1A1A1A;
+  --text-mid:#444;
+  --text-light:#777;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Open Sans',sans-serif;background:var(--white);color:var(--text-dark);overflow-x:hidden;}
+
+/* NAV */
+.nav{background:var(--hero-dark);display:flex;align-items:center;justify-content:space-between;padding:1.2rem 6vw;position:sticky;top:0;z-index:100;}
+.nav-logo{font-family:'Montserrat',sans-serif;font-size:.9rem;font-weight:900;color:var(--white);letter-spacing:.08em;text-transform:uppercase;text-decoration:none;}
+.nav-logo span{color:var(--teal-bright);}
+.nav-back{font-family:'Montserrat',sans-serif;font-size:.6rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--teal);text-decoration:none;display:flex;align-items:center;gap:.4rem;}
+.nav-back::before{content:'';width:16px;height:1px;background:var(--teal);}
+
+/* --- COVER SECTION --- */
+.cover{background:var(--hero-dark);position:relative;overflow:hidden;padding:7rem 6vw 6rem;min-height:75vh;display:flex;align-items:center;}
+.dot-net{position:absolute;inset:0;opacity:.1;background-image:radial-gradient(circle,var(--teal) 1px,transparent 1px);background-size:55px 55px;pointer-events:none;}
+.glow{position:absolute;border-radius:50%;background:radial-gradient(circle,rgba(0,212,188,.15) 0%,transparent 70%);pointer-events:none;}
+.glow-tl{width:700px;height:700px;top:-200px;left:-200px;}
+.glow-br{width:600px;height:600px;bottom:-150px;right:-150px;}
+.cover-inner{max-width:1100px;margin:0 auto;position:relative;z-index:2;}
+.cover-label{font-family:'Montserrat',sans-serif;font-size:.6rem;font-weight:700;letter-spacing:.25em;text-transform:uppercase;color:var(--teal);margin-bottom:1rem;display:block;}
+.cover-for{font-family:'Montserrat',sans-serif;font-size:.72rem;font-weight:400;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:.6rem;display:block;}
+.cover-name{font-family:'Montserrat',sans-serif;font-size:clamp(1rem,2vw,1.3rem);font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--teal-bright);margin-bottom:2rem;display:block;}
+.cover-title{font-family:'Montserrat',sans-serif;font-size:clamp(2.5rem,6vw,4.5rem);font-weight:900;text-transform:uppercase;line-height:1;color:var(--white);margin-bottom:.4rem;}
+.cover-title-accent{font-family:'Montserrat',sans-serif;font-size:clamp(2.5rem,6vw,4.5rem);font-weight:900;text-transform:uppercase;line-height:1;color:var(--teal-bright);}
+.cover-sub{font-size:.9rem;color:rgba(255,255,255,.5);font-weight:300;line-height:1.8;max-width:520px;margin-top:2rem;}
+.cover-date{margin-top:3rem;font-family:'Montserrat',sans-serif;font-size:.6rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.2);}
+.cover-bar{width:50px;height:3px;background:var(--teal-bright);margin:1.5rem 0;}
+
+/* --- SHARED SECTION STYLES --- */
+.section-dark{background:var(--hero-dark);position:relative;overflow:hidden;padding:5rem 6vw;}
+.section-dark-alt{background:var(--dark-section);position:relative;overflow:hidden;padding:5rem 6vw;}
+.section-light{background:var(--off-white);padding:5rem 6vw;}
+.section-white{background:var(--white);padding:5rem 6vw;}
+.section-teal{background:var(--teal-dark);padding:4rem 6vw;}
+.inner{max-width:1100px;margin:0 auto;position:relative;z-index:2;}
+.label{font-family:'Montserrat',sans-serif;font-size:.6rem;font-weight:700;letter-spacing:.25em;text-transform:uppercase;color:var(--teal);margin-bottom:.75rem;display:block;}
+.label-bright{color:var(--teal-bright);}
+.label-light{color:rgba(0,212,188,.6);}
+.section-title{font-family:'Montserrat',sans-serif;font-size:clamp(1.5rem,3vw,2.2rem);font-weight:800;text-transform:uppercase;line-height:1.1;margin-bottom:1.5rem;color:var(--text-dark);}
+.section-title.white{color:var(--white);}
+.section-title span{color:var(--teal-bright);}
+.body{font-size:.88rem;color:var(--text-mid);font-weight:300;line-height:1.9;max-width:700px;}
+.body-light{font-size:.88rem;color:rgba(255,255,255,.55);font-weight:300;line-height:1.9;max-width:700px;}
+.body-white{font-size:.88rem;color:rgba(255,255,255,.75);font-weight:300;line-height:1.9;max-width:700px;}
+.teal-rule{width:50px;height:2px;background:var(--teal-bright);margin:2rem 0;}
+
+/* --- VISION SECTION --- */
+.vision-layout{display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:center;}
+.vision-text{}
+.vision-text p{font-size:1rem;color:rgba(255,255,255,.7);font-weight:300;line-height:2;margin-bottom:1.2rem;}
+.vision-text p.lead{font-size:1.15rem;color:rgba(255,255,255,.85);font-weight:300;line-height:1.9;}
+.vision-stat-block{background:rgba(0,212,188,.07);border:1px solid rgba(0,212,188,.18);padding:2.5rem;}
+.vision-stat{text-align:center;padding:1.5rem 0;border-bottom:1px solid rgba(0,212,188,.12);}
+.vision-stat:last-child{border-bottom:none;}
+.vision-stat-num{font-family:'Montserrat',sans-serif;font-size:2.2rem;font-weight:900;color:var(--teal-bright);display:block;line-height:1;}
+.vision-stat-label{font-family:'Montserrat',sans-serif;font-size:.6rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-top:.4rem;display:block;}
+.vision-stat-note{font-size:.75rem;color:rgba(255,255,255,.35);font-weight:300;margin-top:.3rem;}
+
+/* --- QUOTE SECTION --- */
+.quote-section{background:var(--hero-mid);padding:5rem 6vw;text-align:center;position:relative;overflow:hidden;}
+.quote-mark{font-family:'Montserrat',sans-serif;font-size:8rem;font-weight:900;color:rgba(0,212,188,.08);line-height:1;position:absolute;top:2rem;left:50%;transform:translateX(-50%);}
+.quote-text{font-family:'Montserrat',sans-serif;font-size:clamp(1.1rem,2.5vw,1.65rem);font-weight:700;color:var(--white);line-height:1.5;max-width:780px;margin:0 auto;position:relative;z-index:2;font-style:italic;letter-spacing:.01em;}
+.quote-text em{color:var(--teal-bright);font-style:normal;}
+.quote-attr{font-family:'Montserrat',sans-serif;font-size:.62rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-top:2rem;}
+
+/* --- BUILT SECTION --- */
+.built-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.5px;background:rgba(0,212,188,.15);margin-top:3rem;}
+.built-card{background:var(--white);padding:2.5rem 2rem;}
+.built-card-icon{width:44px;height:44px;background:var(--off-white);display:flex;align-items:center;justify-content:center;margin-bottom:1.5rem;}
+.built-card-icon svg{width:20px;height:20px;stroke:var(--teal);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;}
+.built-card-title{font-family:'Montserrat',sans-serif;font-size:.85rem;font-weight:800;text-transform:uppercase;color:var(--text-dark);letter-spacing:.02em;margin-bottom:.6rem;}
+.built-card-text{font-size:.8rem;color:var(--text-light);font-weight:300;line-height:1.75;}
+
+/* --- OPPORTUNITIES --- */
+.opp-list{display:flex;flex-direction:column;gap:1.5px;background:rgba(0,212,188,.15);margin-top:3rem;}
+.opp-item{background:var(--hero-mid);padding:2.5rem 3rem;display:grid;grid-template-columns:80px 1fr auto;gap:2rem;align-items:start;}
+.opp-num{font-family:'Montserrat',sans-serif;font-size:2.5rem;font-weight:900;color:rgba(0,212,188,.15);line-height:1;}
+.opp-content{}
+.opp-title{font-family:'Montserrat',sans-serif;font-size:.95rem;font-weight:800;text-transform:uppercase;color:var(--white);letter-spacing:.03em;margin-bottom:.6rem;}
+.opp-text{font-size:.82rem;color:rgba(255,255,255,.5);font-weight:300;line-height:1.85;}
+.opp-tag{font-family:'Montserrat',sans-serif;font-size:.55rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;padding:.35rem .8rem;white-space:nowrap;align-self:start;}
+.tag-quick{background:rgba(0,212,188,.15);color:var(--teal-bright);border:1px solid rgba(0,212,188,.25);}
+.tag-system{background:rgba(0,180,160,.1);color:var(--teal);border:1px solid rgba(0,180,160,.2);}
+.tag-strategy{background:rgba(0,122,110,.2);color:rgba(0,212,188,.6);border:1px solid rgba(0,122,110,.3);}
+
+/* --- QUICK WINS --- */
+.wins-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1px;background:var(--light-gray);margin-top:3rem;}
+.win-card{background:var(--off-white);padding:2rem 1.75rem;}
+.win-num{font-family:'Montserrat',sans-serif;font-size:.58rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--teal);margin-bottom:1rem;display:block;}
+.win-title{font-family:'Montserrat',sans-serif;font-size:.85rem;font-weight:800;text-transform:uppercase;color:var(--text-dark);margin-bottom:.5rem;letter-spacing:.02em;}
+.win-text{font-size:.78rem;color:var(--text-light);font-weight:300;line-height:1.75;}
+
+/* --- QUOTE 2 --- */
+.quote2-section{background:var(--teal-dark);padding:4.5rem 6vw;text-align:center;}
+.quote2-text{font-family:'Montserrat',sans-serif;font-size:clamp(1rem,2vw,1.4rem);font-weight:700;color:var(--white);line-height:1.5;max-width:700px;margin:0 auto;font-style:italic;}
+.quote2-text em{color:var(--teal-bright);font-style:normal;}
+
+/* --- TIMELINE --- */
+.timeline{margin-top:3rem;position:relative;}
+.timeline::before{content:'';position:absolute;left:28px;top:0;bottom:0;width:1px;background:rgba(0,212,188,.2);}
+.timeline-item{display:flex;gap:2.5rem;margin-bottom:2.5rem;position:relative;}
+.timeline-dot{width:57px;flex-shrink:0;display:flex;justify-content:center;padding-top:4px;}
+.timeline-dot-inner{width:14px;height:14px;background:var(--hero-dark);border:2px solid var(--teal-bright);border-radius:50%;position:relative;z-index:2;}
+.timeline-dot-inner.active{background:var(--teal-bright);}
+.timeline-content{flex:1;padding-bottom:2rem;}
+.timeline-phase{font-family:'Montserrat',sans-serif;font-size:.58rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--teal);margin-bottom:.4rem;display:block;}
+.timeline-title{font-family:'Montserrat',sans-serif;font-size:1rem;font-weight:800;text-transform:uppercase;color:var(--white);margin-bottom:.6rem;letter-spacing:.02em;}
+.timeline-desc{font-size:.82rem;color:rgba(255,255,255,.5);font-weight:300;line-height:1.8;}
+.timeline-items-list{list-style:none;margin-top:.8rem;display:flex;flex-direction:column;gap:.4rem;}
+.timeline-items-list li{font-size:.78rem;color:rgba(255,255,255,.45);font-weight:300;padding-left:1rem;position:relative;}
+.timeline-items-list li::before{content:'';position:absolute;left:0;top:.5em;width:4px;height:4px;background:var(--teal);border-radius:50%;}
+
+/* --- LETS TALK --- */
+.talk-section{background:var(--hero-dark);padding:6rem 6vw;position:relative;overflow:hidden;text-align:center;}
+.talk-inner{max-width:700px;margin:0 auto;position:relative;z-index:2;}
+.talk-title{font-family:'Montserrat',sans-serif;font-size:clamp(1.8rem,4vw,2.8rem);font-weight:900;text-transform:uppercase;color:var(--white);line-height:1.1;margin-bottom:1.5rem;}
+.talk-title span{color:var(--teal-bright);}
+.talk-text{font-size:.88rem;color:rgba(255,255,255,.55);font-weight:300;line-height:1.9;margin-bottom:2.5rem;}
+.talk-options{display:flex;justify-content:center;gap:1.5rem;flex-wrap:wrap;}
+.talk-card{padding:2rem 2.5rem;border:1.5px solid rgba(0,212,188,.25);text-align:center;min-width:220px;}
+.talk-card-title{font-family:'Montserrat',sans-serif;font-size:.8rem;font-weight:800;text-transform:uppercase;color:var(--white);margin-bottom:.4rem;letter-spacing:.03em;}
+.talk-card-sub{font-size:.78rem;color:rgba(255,255,255,.45);font-weight:300;line-height:1.6;}
+.talk-card.featured{border-color:var(--teal-bright);background:rgba(0,212,188,.06);}
+.talk-card.featured .talk-card-title{color:var(--teal-bright);}
+
+/* --- TRUST --- */
+.trust-section{background:var(--off-white);padding:5rem 6vw;}
+.trust-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:2rem;margin-top:3rem;}
+.trust-item{display:flex;gap:1.2rem;align-items:flex-start;}
+.trust-icon{width:40px;height:40px;background:var(--white);border:1px solid var(--light-gray);flex-shrink:0;display:flex;align-items:center;justify-content:center;}
+.trust-icon svg{width:18px;height:18px;stroke:var(--teal);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;}
+.trust-text-block{}
+.trust-item-title{font-family:'Montserrat',sans-serif;font-size:.78rem;font-weight:800;text-transform:uppercase;color:var(--text-dark);margin-bottom:.3rem;letter-spacing:.02em;}
+.trust-item-text{font-size:.76rem;color:var(--text-light);font-weight:300;line-height:1.75;}
+
+/* --- NEXT STEPS SECTION --- */
+.nextsteps-section{background:var(--hero-mid);padding:5rem 6vw;}
+.nextsteps-inner{max-width:1100px;margin:0 auto;}
+.nextsteps-layout{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;}
+.nextsteps-left{}
+.nextsteps-right{background:rgba(0,212,188,.06);border:1px solid rgba(0,212,188,.2);padding:2.5rem;}
+.nextsteps-title{font-family:'Montserrat',sans-serif;font-size:.78rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--teal-bright);margin-bottom:.5rem;display:block;}
+.nextsteps-date{font-family:'Montserrat',sans-serif;font-size:clamp(1.3rem,3vw,2rem);font-weight:900;color:var(--white);text-transform:uppercase;line-height:1.1;margin-bottom:1rem;}
+.nextsteps-time{font-family:'Montserrat',sans-serif;font-size:1.1rem;font-weight:400;color:var(--teal-bright);}
+.nextsteps-text{font-size:.84rem;color:rgba(255,255,255,.5);font-weight:300;line-height:1.85;margin-top:1rem;}
+.agenda-list{list-style:none;margin-top:0;}
+.agenda-list li{font-size:.8rem;color:rgba(255,255,255,.55);font-weight:300;padding:.7rem 0;border-bottom:1px solid rgba(0,212,188,.1);display:flex;gap:.8rem;align-items:flex-start;line-height:1.6;}
+.agenda-list li:last-child{border-bottom:none;}
+.agenda-list li::before{content:'';width:5px;height:5px;background:var(--teal);border-radius:50%;flex-shrink:0;margin-top:.5em;}
+
+/* FOOTER */
+.footer{background:var(--hero-dark);padding:3rem 6vw;border-top:1px solid rgba(0,212,188,.1);}
+.footer-inner{max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;}
+.footer-logo{font-family:'Montserrat',sans-serif;font-size:.85rem;font-weight:900;letter-spacing:.08em;text-transform:uppercase;color:var(--white);}
+.footer-logo span{color:var(--teal-bright);}
+.footer-nav{display:flex;gap:2rem;flex-wrap:wrap;}
+.footer-nav a{font-family:'Montserrat',sans-serif;font-size:.6rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.35);text-decoration:none;transition:color .2s;}
+.footer-nav a:hover{color:var(--teal-bright);}
+.footer-copy{font-size:.7rem;color:rgba(255,255,255,.2);font-weight:300;width:100%;}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .vision-layout{grid-template-columns:1fr;}
+  .opp-item{grid-template-columns:60px 1fr;gap:1.5rem;}
+  .opp-tag{display:none;}
+  .nextsteps-layout{grid-template-columns:1fr;}
+}
+@media(max-width:600px){
+  .cover{padding:5rem 5vw 4rem;min-height:auto;}
+  .section-dark,.section-dark-alt,.section-light,.section-white,.section-teal{padding:4rem 5vw;}
+  .quote-section,.quote2-section{padding:3.5rem 5vw;}
+  .opp-item{grid-template-columns:1fr;gap:1rem;padding:2rem 1.5rem;}
+  .opp-num{display:none;}
+  .talk-section{padding:4rem 5vw;}
+  .timeline::before{left:14px;}
+  .timeline-dot{width:30px;}
+  .footer{padding:2.5rem 5vw;}
+  .footer-inner{flex-direction:column;align-items:flex-start;gap:1.5rem;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <a href="index.html" class="nav-back">Back to Hub</a>
+  <div class="nav-logo">CLINIC<span>CATALYST</span></div>
+</nav>
+
+<!-- COVER -->
+<section class="cover">
+  <div class="dot-net"></div>
+  <div class="glow glow-tl"></div>
+  <div class="glow glow-br"></div>
+  <div class="cover-inner">
+    <span class="cover-label">Clinic Catalyst - Confidential Demo</span>
+    <span class="cover-for">Growth Roadmap Prepared For</span>
+    <span class="cover-name">Monique Radatti - Cosmetic Nurse, Melbourne</span>
+    <div class="cover-bar"></div>
+    <h1 class="cover-title">From 60%</h1>
+    <p class="cover-title-accent">To Fully Booked</p>
+    <p class="cover-sub">
+      A clear picture of where your practice stands today, what's in the way of three
+      fully booked days, and the steps that get you there - without burning out or
+      adding more to your plate.
+    </p>
+    <p class="cover-date">Prepared May 2026</p>
+  </div>
+</section>
+
+<!-- VISION SECTION -->
+<section class="section-dark-alt">
+  <div class="dot-net"></div>
+  <div class="inner">
+    <span class="label">Where This Starts</span>
+    <h2 class="section-title white">The <span>Vision</span></h2>
+    <div class="vision-layout">
+      <div class="vision-text">
+        <p class="lead">You didn't become a cosmetic nurse to spend your evenings on Canva. You did it because you love transforming how women feel about themselves.</p>
+        <p>The craft is the easy part. You're exceptional at it - your clients' loyalty and their average spend proves that. What's complicated is everything else: the constant content creation, the manual bookings, the DMs that need answering, the follow-ups that slip through.</p>
+        <p>Right now you're carrying a full business on two working days and doing every single job yourself. That's not sustainable, and it's not necessary.</p>
+        <p>The goal isn't just more patients. It's a practice that works as hard as you do - even on the days you're not in the room.</p>
+      </div>
+      <div class="vision-stat-block">
+        <div class="vision-stat">
+          <span class="vision-stat-num">3</span>
+          <span class="vision-stat-label">Target Working Days</span>
+          <p class="vision-stat-note">Up from your current 2 days</p>
+        </div>
+        <div class="vision-stat">
+          <span class="vision-stat-num">8-12</span>
+          <span class="vision-stat-label">Patients Per Day</span>
+          <p class="vision-stat-note">Your stated goal at full capacity</p>
+        </div>
+        <div class="vision-stat">
+          <span class="vision-stat-num">$700-800</span>
+          <span class="vision-stat-label">Average Patient Spend</span>
+          <p class="vision-stat-note">Already well above industry average</p>
+        </div>
+        <div class="vision-stat">
+          <span class="vision-stat-num">60-70%</span>
+          <span class="vision-stat-label">Current Capacity</span>
+          <p class="vision-stat-note">On a 2-day schedule</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUOTE 1 -->
+<section class="quote-section">
+  <div class="dot-net"></div>
+  <div class="quote-mark">"</div>
+  <blockquote class="quote-text">
+    "The gap between where you are and where you want to be isn't a skills gap.
+    It's a <em>systems gap</em> - and that's the most fixable kind."
+  </blockquote>
+  <p class="quote-attr">Clinic Catalyst</p>
+</section>
+
+<!-- WHAT YOU'VE BUILT -->
+<section class="section-white">
+  <div class="inner">
+    <span class="label">Before We Talk About What's Next</span>
+    <h2 class="section-title">Let's Celebrate <span>What You've Built</span></h2>
+    <p class="body">
+      It's easy to focus on the gap. But first - here's what's actually true about your practice right now.
+    </p>
+    <div class="built-grid">
+      <div class="built-card">
+        <div class="built-card-icon">
+          <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <h3 class="built-card-title">A Loyal Clientele</h3>
+        <p class="built-card-text">You're running at 60-70% capacity on two days without ads, without email marketing, and without a full-time front of house. That's word of mouth doing the heavy lifting - and it speaks to the experience you deliver.</p>
+      </div>
+      <div class="built-card">
+        <div class="built-card-icon">
+          <svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        </div>
+        <h3 class="built-card-title">A High-Value Patient</h3>
+        <p class="built-card-text">$700-800 average spend is excellent. You're attracting clients who invest in themselves properly, not bargain-hunters. That's the foundation of a sustainable practice - you don't need volume, you need the right volume.</p>
+      </div>
+      <div class="built-card">
+        <div class="built-card-icon">
+          <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </div>
+        <h3 class="built-card-title">Genuine Care for Clients</h3>
+        <p class="built-card-text">Your free 15-minute virtual consult isn't a marketing tactic - it's a real commitment. Women feel that. In a market full of "book now" pressure, your consult-first approach is genuinely rare and genuinely valuable.</p>
+      </div>
+      <div class="built-card">
+        <div class="built-card-icon">
+          <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+        </div>
+        <h3 class="built-card-title">A Recent Website Investment</h3>
+        <p class="built-card-text">You've already invested in having a proper website built. The foundation is there - it just needs the right visibility and the right conversion strategy layered on top.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OPPORTUNITIES -->
+<section class="section-dark">
+  <div class="dot-net"></div>
+  <div class="inner">
+    <span class="label">The Growth Levers</span>
+    <h2 class="section-title white">Where the <span>Opportunity</span> Is</h2>
+    <p class="body-light">Five areas where your practice is leaving patients - and revenue - on the table. None of these require you to work more days or see more clients than you want to.</p>
+    <div class="opp-list">
+
+      <div class="opp-item">
+        <span class="opp-num">01</span>
+        <div class="opp-content">
+          <h3 class="opp-title">Be Found When They Search</h3>
+          <p class="opp-text">Right now, a woman in Melbourne searching "cosmetic nurse near me" cannot find you. Your website was recently rebuilt, but without search engine optimisation it's invisible to anyone who doesn't already know your name. The women you want - thoughtful, research-driven, in their 40s - start with Google. They need to find you there first.</p>
+        </div>
+        <span class="opp-tag tag-system">SEO + Visibility</span>
+      </div>
+
+      <div class="opp-item">
+        <span class="opp-num">02</span>
+        <div class="opp-content">
+          <h3 class="opp-title">Let Monique Shine</h3>
+          <p class="opp-text">You are the product. In a space where trust is everything, women choose their injector based on how they feel about the person behind the needle - not the before-and-after (which you can't show anyway). Educational video content that positions you as a knowledgeable, empathetic expert is your most powerful growth channel. Three short Reels per week on topics like ageing gracefully, what to expect from a consultation, and how to spot a good injector builds trust at scale - while you're seeing patients.</p>
+        </div>
+        <span class="opp-tag tag-strategy">Content + Trust</span>
+      </div>
+
+      <div class="opp-item">
+        <span class="opp-num">03</span>
+        <div class="opp-content">
+          <h3 class="opp-title">Automate the Admin</h3>
+          <p class="opp-text">You're spending 5+ hours per week on social media alone - plus booking, follow-ups, and client communications - all manually, all yourself. Timely has features you're not using: automated appointment reminders, rebooking prompts, post-appointment follow-ups. Getting that infrastructure turned on is low-cost, fast to set up, and immediately reclaims hours every week.</p>
+        </div>
+        <span class="opp-tag tag-quick">Quick Win</span>
+      </div>
+
+      <div class="opp-item">
+        <span class="opp-num">04</span>
+        <div class="opp-content">
+          <h3 class="opp-title">The Rejuran Advantage</h3>
+          <p class="opp-text">Most treatments you offer sit under AHPRA advertising restrictions - which means you can't name them in ads or promotional content. Rejuran is one of the few treatments that doesn't carry the same restrictions. Skin rejuvenation, under-eye quality, and skin health - these are outcomes you can speak to directly. This is a legitimate advertising entry point for cold audiences that doesn't require you to bend any rules.</p>
+        </div>
+        <span class="opp-tag tag-strategy">Advertising Edge</span>
+      </div>
+
+      <div class="opp-item">
+        <span class="opp-num">05</span>
+        <div class="opp-content">
+          <h3 class="opp-title">Virtual Consult as Your Front Door</h3>
+          <p class="opp-text">You already offer a free 15-minute virtual consultation - that's your front-end offer and you don't need to build one from scratch. The opportunity is using it intentionally: as the call to action on your website, the destination for your content, and the entry point for cold audiences who aren't ready to walk into a clinic but are ready to have a conversation. The consult is where the relationship starts. It's also where most of your competitors have nothing.</p>
+        </div>
+        <span class="opp-tag tag-quick">Immediate Opportunity</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- QUICK WINS -->
+<section class="section-light">
+  <div class="inner">
+    <span class="label">Start Here</span>
+    <h2 class="section-title">Quick <span>Wins</span> You Can Move On This Week</h2>
+    <p class="body">These don't require a full system build. They're fast, low-cost, and will make an immediate difference.</p>
+    <div class="wins-grid">
+      <div class="win-card">
+        <span class="win-num">Win 01</span>
+        <h3 class="win-title">Timely Email Reminders</h3>
+        <p class="win-text">Turn on automated appointment reminders and post-appointment follow-up messages inside Timely. It takes under an hour to set up and immediately reduces no-shows and lapsed clients.</p>
+      </div>
+      <div class="win-card">
+        <span class="win-num">Win 02</span>
+        <h3 class="win-title">Three Educational Reels Per Week</h3>
+        <p class="win-text">Short videos where you speak directly to camera about topics your patients ask about. Ageing gracefully. What happens in a consultation. How to choose an injector. No treatments named. No before-and-afters. Just you, being the expert you already are.</p>
+      </div>
+      <div class="win-card">
+        <span class="win-num">Win 03</span>
+        <h3 class="win-title">Instagram Bio Optimisation</h3>
+        <p class="win-text">Your bio should immediately tell a new visitor who you are, what you do, where you're based, and what to do next - with a direct link to your free virtual consult. Most injector bios are a missed opportunity. Yours doesn't need to be.</p>
+      </div>
+      <div class="win-card">
+        <span class="win-num">Win 04</span>
+        <h3 class="win-title">Website SEO Basics</h3>
+        <p class="win-text">Page title, meta description, your location, and the words women actually type when searching. These basic fixes take a couple of hours but are the difference between being findable and being invisible to people who don't already know your name.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUOTE 2 -->
+<section class="quote2-section">
+  <blockquote class="quote2-text">
+    "The best injector in Melbourne with no online presence loses to a mediocre one who
+    shows up <em>exactly when someone is looking</em>."
+  </blockquote>
+</section>
+
+<!-- TIMELINE -->
+<section class="section-dark-alt">
+  <div class="dot-net"></div>
+  <div class="inner">
+    <span class="label">The Path Forward</span>
+    <h2 class="section-title white">Setup <span>Timeline</span></h2>
+    <p class="body-light">A phased approach that builds your digital foundation properly, so every piece supports the next.</p>
+    <div class="timeline">
+
+      <div class="timeline-item">
+        <div class="timeline-dot"><div class="timeline-dot-inner active"></div></div>
+        <div class="timeline-content">
+          <span class="timeline-phase">Phase 1 - Weeks 1-2</span>
+          <h3 class="timeline-title">Foundation</h3>
+          <p class="timeline-desc">The infrastructure that everything else builds on.</p>
+          <ul class="timeline-items-list">
+            <li>Timely automation - reminders, follow-ups, rebooking prompts</li>
+            <li>Instagram bio and link-in-bio update with virtual consult CTA</li>
+            <li>Website SEO audit and quick-fix implementation</li>
+            <li>Virtual consult landing page live (like the one in this demo)</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"><div class="timeline-dot-inner"></div></div>
+        <div class="timeline-content">
+          <span class="timeline-phase">Phase 2 - Weeks 3-6</span>
+          <h3 class="timeline-title">Content Engine</h3>
+          <p class="timeline-desc">Establishing your educational content rhythm so Monique builds visibility on autopilot.</p>
+          <ul class="timeline-items-list">
+            <li>Brand voice and content framework defined (so ChatGPT/Canva work faster)</li>
+            <li>3-Reel per week content strategy - topics, structure, filming tips</li>
+            <li>Rejuran content - skin quality positioning that can run as paid</li>
+            <li>Saved Instagram reply templates for common DMs</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"><div class="timeline-dot-inner"></div></div>
+        <div class="timeline-content">
+          <span class="timeline-phase">Phase 3 - Weeks 6-10</span>
+          <h3 class="timeline-title">Lead Nurture</h3>
+          <p class="timeline-desc">Converting warm interest into booked consultations without manual follow-up.</p>
+          <ul class="timeline-items-list">
+            <li>Virtual consult intake sequence - what happens before and after</li>
+            <li>Email or SMS follow-up for people who enquire but don't book</li>
+            <li>Seasonal content planning around key decision moments</li>
+            <li>Review of capacity and booking patterns - are Tuesdays and Thursdays optimised?</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- LETS TALK -->
+<section class="talk-section">
+  <div class="dot-net"></div>
+  <div class="glow glow-tl"></div>
+  <div class="talk-inner">
+    <span class="label label-bright">Your Setup Options</span>
+    <h2 class="talk-title">Let's <span>Talk</span> About the Right Fit</h2>
+    <p class="talk-text">
+      There are two ways to work with Clinic Catalyst depending on your situation.
+      We'll walk you through both properly on Tuesday - no pressure, just a clear conversation
+      about what makes sense for your practice right now.
+    </p>
+    <div class="talk-options">
+      <div class="talk-card">
+        <p class="talk-card-title">One-on-One Setup</p>
+        <p class="talk-card-sub">Built specifically for you.<br>Done together, handed over ready to run.</p>
+      </div>
+      <div class="talk-card featured">
+        <p class="talk-card-title">Group Setup Event</p>
+        <p class="talk-card-sub">Build with a small cohort of clinic owners.<br>Same outcomes, shared investment.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST -->
+<section class="trust-section">
+  <div class="inner">
+    <span class="label">Why Clinic Catalyst</span>
+    <h2 class="section-title">What We <span>Actually</span> Do</h2>
+    <div class="trust-grid">
+      <div class="trust-item">
+        <div class="trust-icon">
+          <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        </div>
+        <div class="trust-text-block">
+          <h4 class="trust-item-title">AHPRA-Aware Strategy</h4>
+          <p class="trust-item-text">We understand the advertising restrictions around injectable treatments and build strategy that generates results without putting your AHPRA registration at risk.</p>
+        </div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+        </div>
+        <div class="trust-text-block">
+          <h4 class="trust-item-title">Setup, Not Dependence</h4>
+          <p class="trust-item-text">We build your systems, train you on them, and hand them over. You own everything. No lock-in, no monthly agency dependency for things that should be running themselves.</p>
+        </div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon">
+          <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <div class="trust-text-block">
+          <h4 class="trust-item-title">Built for Clinic Owners</h4>
+          <p class="trust-item-text">Alicia Hagen and Kelly Wotherspoon work exclusively with clinic owners. This is not a generic marketing package repurposed for aesthetics - it's built from the ground up for practices like yours.</p>
+        </div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon">
+          <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        </div>
+        <div class="trust-text-block">
+          <h4 class="trust-item-title">Results You Can Track</h4>
+          <p class="trust-item-text">Enquiries, bookings, consult conversion rates, capacity percentage. We set up the tracking so you can see what's working - not just trust that it is.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEXT STEPS -->
+<section class="nextsteps-section">
+  <div class="nextsteps-inner">
+    <div class="nextsteps-layout">
+      <div class="nextsteps-left">
+        <span class="label label-light">Confirmed</span>
+        <h2 class="section-title white">Your <span>Next Step</span></h2>
+        <span class="nextsteps-title">Follow-Up Session</span>
+        <p class="nextsteps-date">Tuesday May 26</p>
+        <p class="nextsteps-time">12:45pm</p>
+        <p class="nextsteps-text">
+          Take some time to read through this roadmap and the consultation landing page before we
+          speak. Come with questions - the session is yours to use however is most useful.
+          We'll cover setup options, answer anything in this document, and if it feels right,
+          map out how we move forward together.
+        </p>
+      </div>
+      <div class="nextsteps-right">
+        <span class="label label-bright" style="margin-bottom:1.5rem;">What We'll Cover on Tuesday</span>
+        <ul class="agenda-list">
+          <li>Walk through this roadmap together and answer any questions</li>
+          <li>Review the consultation landing page concept</li>
+          <li>Discuss the two setup options in detail</li>
+          <li>Look at what's realistic given your Tuesday + Thursday schedule</li>
+          <li>Talk through AHPRA-safe content and advertising strategy</li>
+          <li>Decide together whether and how to proceed</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-logo">CLINIC<span>CATALYST</span></div>
+    <nav class="footer-nav">
+      <a href="index.html">Hub</a>
+      <a href="landing.html">Landing Page</a>
+    </nav>
+    <p class="footer-copy">Confidential - Prepared for Monique Radatti, May 2026. Clinic Catalyst by Kelly Wotherspoon + Alicia Hagen.</p>
+  </div>
+</footer>
+
+</body>
+</html>

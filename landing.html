@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Monique Radatti - Cosmetic Nurse Melbourne | Book Your Free Consultation</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#FAF7F4;
+  --warm-white:#FFFCF9;
+  --stone:#E8E0D6;
+  --stone-mid:#D4C9BC;
+  --brown-light:#B09F8D;
+  --brown-mid:#7A6A5B;
+  --brown-dark:#3D3028;
+  --text-dark:#1E1812;
+  --text-mid:#5A4E44;
+  --text-light:#8A7A6E;
+  --text-pale:#B8AC9F;
+  --teal:#00B4A0;
+  --teal-bright:#00D4BC;
+  --teal-dark:#007A6E;
+  --white:#FFFFFF;
+  --border:#E8DDD4;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Inter',sans-serif;background:var(--warm-white);color:var(--text-dark);overflow-x:hidden;}
+
+/* NAV */
+.nav{background:var(--warm-white);border-bottom:1px solid var(--border);padding:1.1rem 6vw;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;}
+.nav-name{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:600;color:var(--text-dark);letter-spacing:.02em;}
+.nav-name span{color:var(--teal-dark);font-style:italic;}
+.nav-cta{background:var(--teal-dark);color:var(--white);font-family:'Inter',sans-serif;font-size:.7rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:.7rem 1.6rem;text-decoration:none;transition:background .2s;}
+.nav-cta:hover{background:var(--teal);}
+.nav-badge{font-size:.72rem;color:var(--text-light);font-weight:400;display:none;}
+@media(min-width:640px){.nav-badge{display:block;}}
+
+/* HERO */
+.hero{background:var(--brown-dark);position:relative;overflow:hidden;min-height:92vh;display:flex;align-items:center;}
+.hero-bg{position:absolute;inset:0;z-index:0;}
+.hero-bg-img{width:100%;height:100%;object-fit:cover;object-position:center top;opacity:.22;filter:saturate(.6);}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(120deg,rgba(30,24,18,.92) 0%,rgba(30,24,18,.6) 60%,rgba(30,24,18,.3) 100%);z-index:1;}
+.hero-inner{max-width:1200px;margin:0 auto;padding:8rem 6vw 6rem;position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;}
+.hero-text{}
+.hero-kicker{font-family:'Inter',sans-serif;font-size:.68rem;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--teal-bright);margin-bottom:1.5rem;display:block;}
+.hero-title{font-family:'Playfair Display',serif;font-size:clamp(2.2rem,5vw,3.6rem);font-weight:600;color:var(--white);line-height:1.15;margin-bottom:1.5rem;}
+.hero-title em{font-style:italic;color:var(--teal-bright);}
+.hero-subtitle{font-size:.95rem;color:rgba(255,255,255,.6);font-weight:300;line-height:1.9;margin-bottom:2.5rem;max-width:480px;}
+.hero-cta-group{display:flex;flex-direction:column;gap:1rem;align-items:flex-start;}
+.btn-primary{display:inline-block;background:var(--teal-dark);color:var(--white);padding:1rem 2.2rem;font-family:'Inter',sans-serif;font-size:.75rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;transition:background .2s;}
+.btn-primary:hover{background:var(--teal);}
+.btn-secondary{display:inline-block;border:1px solid rgba(255,255,255,.3);color:rgba(255,255,255,.7);padding:.9rem 2rem;font-family:'Inter',sans-serif;font-size:.72rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;transition:all .2s;}
+.btn-secondary:hover{border-color:rgba(255,255,255,.6);color:var(--white);}
+.hero-note{font-size:.73rem;color:rgba(255,255,255,.35);font-weight:300;}
+.hero-card-side{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);backdrop-filter:blur(10px);padding:3rem 2.5rem;}
+.hero-card-item{padding:1.2rem 0;border-bottom:1px solid rgba(255,255,255,.08);}
+.hero-card-item:last-child{border-bottom:none;padding-bottom:0;}
+.hero-card-item:first-child{padding-top:0;}
+.hero-card-label{font-size:.63rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--teal-bright);margin-bottom:.3rem;display:block;}
+.hero-card-text{font-size:.84rem;color:rgba(255,255,255,.65);font-weight:300;line-height:1.6;}
+.hero-card-text strong{color:rgba(255,255,255,.85);font-weight:500;}
+
+/* INTRO STRIP */
+.intro-strip{background:var(--teal-dark);padding:2rem 6vw;}
+.intro-strip-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap;}
+.intro-strip-text{font-family:'Playfair Display',serif;font-size:clamp(.95rem,2vw,1.2rem);color:rgba(255,255,255,.85);font-style:italic;}
+.intro-strip-link{font-family:'Inter',sans-serif;font-size:.68rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--teal-bright);text-decoration:none;white-space:nowrap;flex-shrink:0;}
+
+/* ABOUT SECTION */
+.about-section{background:var(--warm-white);padding:7rem 6vw;}
+.about-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:7rem;align-items:center;}
+.about-image-block{position:relative;}
+.about-image-wrap{position:relative;overflow:hidden;aspect-ratio:4/5;}
+.about-image-wrap img{width:100%;height:100%;object-fit:cover;object-position:center top;}
+.about-image-placeholder{width:100%;height:100%;background:linear-gradient(135deg,var(--stone) 0%,var(--brown-light) 100%);display:flex;align-items:center;justify-content:center;aspect-ratio:4/5;}
+.about-image-placeholder span{font-family:'Playfair Display',serif;font-size:1rem;color:var(--brown-mid);text-align:center;padding:2rem;}
+.about-accent-line{position:absolute;top:2rem;left:-1.5rem;width:2px;height:60%;background:var(--teal-dark);}
+.about-text{}
+.about-kicker{font-family:'Inter',sans-serif;font-size:.63rem;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--teal-dark);margin-bottom:1rem;display:block;}
+.about-title{font-family:'Playfair Display',serif;font-size:clamp(1.6rem,3vw,2.3rem);font-weight:600;color:var(--text-dark);line-height:1.25;margin-bottom:1.5rem;}
+.about-title em{font-style:italic;color:var(--brown-mid);}
+.about-body{font-size:.9rem;color:var(--text-mid);font-weight:300;line-height:1.95;margin-bottom:1.2rem;}
+.about-creds{margin-top:2rem;display:flex;flex-direction:column;gap:.8rem;}
+.about-cred{display:flex;align-items:flex-start;gap:.8rem;}
+.about-cred-dot{width:6px;height:6px;background:var(--teal-dark);border-radius:50%;flex-shrink:0;margin-top:.55em;}
+.about-cred-text{font-size:.8rem;color:var(--text-light);font-weight:400;line-height:1.6;}
+
+/* WHAT WOMEN ASK */
+.questions-section{background:var(--cream);padding:7rem 6vw;}
+.questions-inner{max-width:1200px;margin:0 auto;}
+.section-header{text-align:center;margin-bottom:4rem;}
+.section-kicker{font-family:'Inter',sans-serif;font-size:.63rem;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--teal-dark);margin-bottom:1rem;display:block;}
+.section-title{font-family:'Playfair Display',serif;font-size:clamp(1.7rem,3.5vw,2.5rem);font-weight:600;color:var(--text-dark);line-height:1.2;}
+.section-title em{font-style:italic;color:var(--brown-mid);}
+.section-sub{font-size:.88rem;color:var(--text-light);font-weight:300;line-height:1.85;max-width:580px;margin:.8rem auto 0;}
+.questions-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5px;background:var(--stone-mid);}
+.q-card{background:var(--warm-white);padding:2.5rem 2rem;}
+.q-icon{width:40px;height:40px;background:var(--cream);display:flex;align-items:center;justify-content:center;margin-bottom:1.5rem;}
+.q-icon svg{width:18px;height:18px;stroke:var(--teal-dark);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;}
+.q-question{font-family:'Playfair Display',serif;font-size:.95rem;font-weight:600;color:var(--text-dark);font-style:italic;margin-bottom:.8rem;line-height:1.4;}
+.q-answer{font-size:.8rem;color:var(--text-mid);font-weight:300;line-height:1.8;}
+
+/* HOW IT WORKS */
+.process-section{background:var(--white);padding:7rem 6vw;}
+.process-inner{max-width:1200px;margin:0 auto;}
+.process-steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:0;margin-top:4rem;position:relative;}
+.process-steps::before{content:'';position:absolute;top:28px;left:10%;right:10%;height:1px;background:var(--stone);z-index:0;}
+.process-step{text-align:center;padding:0 1.5rem;position:relative;z-index:1;}
+.process-num{width:56px;height:56px;background:var(--warm-white);border:1.5px solid var(--teal-dark);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem;font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:600;color:var(--teal-dark);}
+.process-num.active{background:var(--teal-dark);color:var(--white);}
+.process-step-title{font-family:'Inter',sans-serif;font-size:.8rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--text-dark);margin-bottom:.6rem;}
+.process-step-text{font-size:.78rem;color:var(--text-light);font-weight:300;line-height:1.75;}
+.process-step-detail{font-size:.72rem;color:var(--teal-dark);font-weight:500;margin-top:.5rem;}
+
+/* CTA SECTION */
+.cta-section{background:var(--brown-dark);padding:7rem 6vw;position:relative;overflow:hidden;text-align:center;}
+.cta-overlay{position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(0,122,110,.25) 0%,transparent 70%);pointer-events:none;}
+.cta-inner{max-width:700px;margin:0 auto;position:relative;z-index:2;}
+.cta-kicker{font-family:'Inter',sans-serif;font-size:.63rem;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--teal-bright);margin-bottom:1.2rem;display:block;}
+.cta-title{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,4vw,2.8rem);font-weight:600;color:var(--white);line-height:1.2;margin-bottom:1.2rem;}
+.cta-title em{font-style:italic;color:var(--teal-bright);}
+.cta-text{font-size:.88rem;color:rgba(255,255,255,.55);font-weight:300;line-height:1.9;margin-bottom:2.5rem;}
+.cta-btn{display:inline-block;background:var(--teal-dark);color:var(--white);padding:1.1rem 2.8rem;font-family:'Inter',sans-serif;font-size:.78rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;transition:background .2s;margin-bottom:1rem;}
+.cta-btn:hover{background:var(--teal);}
+.cta-note{font-size:.75rem;color:rgba(255,255,255,.3);font-weight:300;}
+.cta-also{font-size:.78rem;color:rgba(255,255,255,.4);margin-top:1.5rem;font-weight:300;}
+.cta-also a{color:rgba(0,212,188,.6);text-decoration:none;}
+
+/* FAQ */
+.faq-section{background:var(--cream);padding:7rem 6vw;}
+.faq-inner{max-width:800px;margin:0 auto;}
+.faq-list{margin-top:3.5rem;display:flex;flex-direction:column;gap:0;}
+.faq-item{border-bottom:1px solid var(--border);padding:1.8rem 0;}
+.faq-item:first-child{border-top:1px solid var(--border);}
+.faq-q{font-family:'Inter',sans-serif;font-size:.88rem;font-weight:600;color:var(--text-dark);cursor:pointer;display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;line-height:1.5;}
+.faq-q-icon{width:20px;height:20px;flex-shrink:0;stroke:var(--teal-dark);fill:none;stroke-width:1.5;stroke-linecap:round;margin-top:.1em;}
+.faq-a{font-size:.83rem;color:var(--text-mid);font-weight:300;line-height:1.85;padding-top:1rem;display:none;}
+.faq-item.open .faq-a{display:block;}
+.faq-item.open .faq-q{color:var(--teal-dark);}
+.faq-item.open .plus-line-h{display:none;}
+
+/* TESTIMONIALS PLACEHOLDER */
+.testimonials-section{background:var(--white);padding:7rem 6vw;}
+.testimonials-inner{max-width:1200px;margin:0 auto;}
+.testimonials-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2rem;margin-top:3.5rem;}
+.testimonial-card{background:var(--cream);padding:2.5rem;}
+.testimonial-stars{display:flex;gap:.3rem;margin-bottom:1rem;}
+.testimonial-star{width:14px;height:14px;fill:var(--teal-dark);stroke:none;}
+.testimonial-text{font-family:'Playfair Display',serif;font-size:.9rem;font-style:italic;color:var(--text-mid);line-height:1.85;margin-bottom:1.5rem;}
+.testimonial-rule{width:30px;height:1px;background:var(--stone-mid);margin-bottom:1rem;}
+.testimonial-name{font-family:'Inter',sans-serif;font-size:.72rem;font-weight:600;text-transform:uppercase;letter-spacing:.1em;color:var(--text-dark);}
+.testimonial-detail{font-size:.7rem;color:var(--text-pale);font-weight:300;margin-top:.2rem;}
+
+/* BOTTOM CTA STRIP */
+.bottom-strip{background:var(--teal-dark);padding:3.5rem 6vw;text-align:center;}
+.bottom-strip-title{font-family:'Playfair Display',serif;font-size:clamp(1.2rem,2.5vw,1.7rem);font-weight:600;color:var(--white);margin-bottom:1.5rem;font-style:italic;}
+.bottom-strip-title em{font-style:normal;font-weight:700;}
+.bottom-strip-btn{display:inline-block;background:var(--white);color:var(--teal-dark);padding:.95rem 2.4rem;font-family:'Inter',sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;transition:all .2s;}
+.bottom-strip-btn:hover{background:var(--cream);}
+
+/* FOOTER */
+.footer{background:var(--brown-dark);padding:3.5rem 6vw;}
+.footer-inner{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:2rem;}
+.footer-name{font-family:'Playfair Display',serif;font-size:1rem;font-weight:600;color:var(--white);}
+.footer-name span{font-style:italic;color:rgba(255,255,255,.5);}
+.footer-links{display:flex;gap:2rem;flex-wrap:wrap;}
+.footer-links a{font-size:.72rem;color:rgba(255,255,255,.3);text-decoration:none;font-weight:300;transition:color .2s;}
+.footer-links a:hover{color:rgba(255,255,255,.6);}
+.footer-note{font-size:.7rem;color:rgba(255,255,255,.15);font-weight:300;width:100%;margin-top:.5rem;}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .hero-inner{grid-template-columns:1fr;gap:3rem;}
+  .hero-card-side{display:none;}
+  .about-inner{grid-template-columns:1fr;gap:3.5rem;}
+  .about-accent-line{display:none;}
+  .process-steps::before{display:none;}
+}
+@media(max-width:600px){
+  .nav{padding:.9rem 5vw;}
+  .nav-cta{padding:.6rem 1.2rem;font-size:.65rem;}
+  .hero{min-height:auto;}
+  .hero-inner{padding:6rem 5vw 4rem;}
+  .about-section,.questions-section,.process-section,.cta-section,.faq-section,.testimonials-section{padding:4.5rem 5vw;}
+  .hero-cta-group{flex-direction:column;align-items:stretch;}
+  .btn-primary,.btn-secondary{text-align:center;}
+  .intro-strip{padding:1.5rem 5vw;}
+  .intro-strip-inner{flex-direction:column;gap:.8rem;}
+  .footer{padding:2.5rem 5vw;}
+  .footer-inner{flex-direction:column;align-items:flex-start;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <p class="nav-name">Monique Radatti <span>RN</span></p>
+  <span class="nav-badge">Cosmetic Nurse - Melbourne</span>
+  <a href="#consult" class="nav-cta">Free Virtual Consult</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg">
+    <!-- If Monique's photo is available, swap this src -->
+    <img class="hero-bg-img"
+      src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=1400&q=80"
+      alt="Consultation"
+      onerror="this.style.display='none'">
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="hero-inner">
+    <div class="hero-text">
+      <span class="hero-kicker">Cosmetic Nurse - Melbourne</span>
+      <h1 class="hero-title">Ageing Gracefully Starts With <em>the Right Conversation</em></h1>
+      <p class="hero-subtitle">
+        Not a quick appointment. Not a hard sell. A proper consultation with a registered nurse who takes the time to understand your skin, your concerns, and what you actually want - before any decisions are made.
+      </p>
+      <div class="hero-cta-group" id="consult">
+        <a href="#book-consult" class="btn-primary">Book Your Free Virtual Consultation</a>
+        <a href="#how-it-works" class="btn-secondary">See How It Works</a>
+        <p class="hero-note">Free 15-minute virtual consult - no obligation, no pressure</p>
+      </div>
+    </div>
+    <div class="hero-card-side">
+      <div class="hero-card-item">
+        <span class="hero-card-label">Availability</span>
+        <p class="hero-card-text"><strong>Tuesdays 9am - 5pm</strong><br>Thursdays 10am - 8pm</p>
+      </div>
+      <div class="hero-card-item">
+        <span class="hero-card-label">Consultation Deposit</span>
+        <p class="hero-card-text"><strong>$50 - fully redeemable</strong><br>Applied to your treatment</p>
+      </div>
+      <div class="hero-card-item">
+        <span class="hero-card-label">Start With a Free Chat</span>
+        <p class="hero-card-text"><strong>15-minute virtual consult</strong><br>No cost, no commitment</p>
+      </div>
+      <div class="hero-card-item">
+        <span class="hero-card-label">Based In</span>
+        <p class="hero-card-text"><strong>Melbourne, Victoria</strong></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INTRO STRIP -->
+<div class="intro-strip">
+  <div class="intro-strip-inner">
+    <p class="intro-strip-text">"A good consultation changes the outcome. I want every woman to leave knowing exactly what to expect - and feeling genuinely seen."</p>
+    <a href="#book-consult" class="intro-strip-link">Book Your Free Consult &rarr;</a>
+  </div>
+</div>
+
+<!-- ABOUT / MEET MONIQUE -->
+<section class="about-section">
+  <div class="about-inner">
+    <div class="about-image-block">
+      <div class="about-image-wrap">
+        <!-- Replace with Monique's actual photo when available -->
+        <div class="about-image-placeholder">
+          <span>Monique Radatti<br>Cosmetic Nurse RN</span>
+        </div>
+      </div>
+      <div class="about-accent-line"></div>
+    </div>
+    <div class="about-text">
+      <span class="about-kicker">Meet Monique</span>
+      <h2 class="about-title">The Nurse Who Believes <em>Trust Comes First</em></h2>
+      <p class="about-body">
+        I've been a registered nurse for years. Cosmetic work drew me in because of what it does for a woman's confidence - the quiet shift in how she holds herself after feeling genuinely good in her skin again.
+      </p>
+      <p class="about-body">
+        What I've noticed over time is that the consultation is where everything is won or lost. When a woman feels heard - when her concerns are taken seriously, her questions answered honestly, and her expectations understood properly - the outcome is almost always better. And so is the experience.
+      </p>
+      <p class="about-body">
+        I work out of a shared clinic space in Melbourne alongside dermal therapists. We each have our own focus. Mine is cosmetic injectables - done thoughtfully, with every client treated as an individual, not a treatment plan.
+      </p>
+      <div class="about-creds">
+        <div class="about-cred">
+          <div class="about-cred-dot"></div>
+          <p class="about-cred-text">Registered Nurse (RN) - AHPRA registered</p>
+        </div>
+        <div class="about-cred">
+          <div class="about-cred-dot"></div>
+          <p class="about-cred-text">Cosmetic injectables specialist - Melbourne</p>
+        </div>
+        <div class="about-cred">
+          <div class="about-cred-dot"></div>
+          <p class="about-cred-text">Free 15-minute virtual consultations available</p>
+        </div>
+        <div class="about-cred">
+          <div class="about-cred-dot"></div>
+          <p class="about-cred-text">Consultation-first approach - no rush, no pressure</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT WOMEN ASK -->
+<section class="questions-section">
+  <div class="questions-inner">
+    <div class="section-header">
+      <span class="section-kicker">Real Questions</span>
+      <h2 class="section-title">What Women Ask <em>Before Booking</em></h2>
+      <p class="section-sub">Every concern here is one I've heard across the consultation table. None of them are silly. All of them deserve a proper answer.</p>
+    </div>
+    <div class="questions-grid">
+      <div class="q-card">
+        <div class="q-icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+        </div>
+        <p class="q-question">"I've never done anything before. I'm scared of looking overdone."</p>
+        <p class="q-answer">This is the most common thing I hear - and it's exactly why the consultation matters so much. We talk about what you want and, just as importantly, what you don't want. Understated, natural results are always on the table. Nothing happens without your full understanding first.</p>
+      </div>
+      <div class="q-card">
+        <div class="q-icon">
+          <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </div>
+        <p class="q-question">"I just want to look like myself - refreshed, not different."</p>
+        <p class="q-answer">That's my favourite kind of outcome. The goal is never to change your face - it's to help it look as good as it feels when you're at your best. We talk through your specific features, your concerns, and what refreshed actually means to you. Then we work toward that.</p>
+      </div>
+      <div class="q-card">
+        <div class="q-icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <p class="q-question">"How much time will I need? I'm always busy."</p>
+        <p class="q-answer">The virtual consult is 15 minutes and you can do it from home or your car between meetings. In-person appointments are typically 45-60 minutes including the full consultation and any treatment. I run to time - I respect that yours matters.</p>
+      </div>
+      <div class="q-card">
+        <div class="q-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <p class="q-question">"Is it safe? I've read some scary things online."</p>
+        <p class="q-answer">I'm a registered nurse with AHPRA oversight, which means the same professional and safety standards that apply to any registered nurse apply to my work here. I won't proceed with anything I'm not confident is right for you, and I'll always explain the risks and aftercare clearly.</p>
+      </div>
+      <div class="q-card">
+        <div class="q-icon">
+          <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        </div>
+        <p class="q-question">"I don't know what I need - I just know something feels off."</p>
+        <p class="q-answer">You don't need to arrive with a treatment plan. That's what the consultation is for. Tell me what you see in the mirror, what bothers you when you look at photos, or just that you feel tired and you're not sure why. We work it out together - honestly.</p>
+      </div>
+      <div class="q-card">
+        <div class="q-icon">
+          <svg viewBox="0 0 24 24"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+        </div>
+        <p class="q-question">"What does it cost? I don't want any surprises."</p>
+        <p class="q-answer">The virtual consult is completely free. The in-person consultation is $50, which is fully redeemable against any treatment on the day. At the end of our in-person consultation you'll have a clear, personalised plan with full pricing before anything goes ahead. No surprises.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="process-section" id="how-it-works">
+  <div class="process-inner">
+    <div class="section-header">
+      <span class="section-kicker">The Process</span>
+      <h2 class="section-title">How It <em>Works</em></h2>
+      <p class="section-sub">Four steps designed to make the whole experience feel easy, considered, and genuinely yours.</p>
+    </div>
+    <div class="process-steps">
+      <div class="process-step">
+        <div class="process-num active">1</div>
+        <h3 class="process-step-title">Free Virtual Consult</h3>
+        <p class="process-step-text">15 minutes by phone or video. No commitment, no cost. We talk about what you're hoping for and whether in-person is the right next step for you.</p>
+        <p class="process-step-detail">Free - book anytime</p>
+      </div>
+      <div class="process-step">
+        <div class="process-num">2</div>
+        <h3 class="process-step-title">In-Person Consultation</h3>
+        <p class="process-step-text">$50 deposit, fully redeemable. We meet properly - assess your skin, talk through concerns in detail, and I answer every question you have.</p>
+        <p class="process-step-detail">$50 - redeemable on the day</p>
+      </div>
+      <div class="process-step">
+        <div class="process-num">3</div>
+        <h3 class="process-step-title">Your Personalised Plan</h3>
+        <p class="process-step-text">At the end of the consultation you'll have a clear, specific plan - what I'd recommend, why, and full pricing. No pressure to proceed on the day.</p>
+        <p class="process-step-detail">Clear plan + full pricing</p>
+      </div>
+      <div class="process-step">
+        <div class="process-num">4</div>
+        <h3 class="process-step-title">Ongoing Care</h3>
+        <p class="process-step-text">Your results are checked and your plan is adjusted over time. Good cosmetic nursing isn't a one-off - it's a relationship built around how your skin changes and what you want as your priorities evolve.</p>
+        <p class="process-step-detail">Long-term care relationship</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials-section">
+  <div class="testimonials-inner">
+    <div class="section-header">
+      <span class="section-kicker">From Clients</span>
+      <h2 class="section-title">What They <em>Say</em></h2>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="testimonial-stars">
+          <svg class="testimonial-star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg class="testimonial-star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg class="testimonial-star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg class="testimonial-star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg class="testimonial-star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <p class="testimonial-text">"I was so nervous walking in - I'd never done anything before and had a million fears about looking unnatural. Monique spent nearly half an hour just talking with me. No rush. I felt completely comfortable and I absolutely love the result."</p>
+        <div class="testimonial-rule"></div>
+        <p class="testimonial-name">Sarah M.</p>
+        <p class="testimonial-detail">Melbourne - Verified client</p>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">
+          <svg class="testimonial-star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg class="testimonial-star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg class="testimonial-star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg class="testimonial-star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg class="testimonial-star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <p class="testimonial-text">"I'd been to somewhere else before and had an experience I wasn't happy with. Coming to Monique felt completely different from the first call. She looked at my whole face, not just the area I mentioned. That made all the difference."</p>
+        <div class="testimonial-rule"></div>
+        <p class="testimonial-name">Jen K.</p>
+        <p class="testimonial-detail">Melbourne - Verified client</p>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">
+          <svg class="testimonial-star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg class="testimonial-star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg class="testimonial-star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg class="testimonial-star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg class="testimonial-star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <p class="testimonial-text">"I'm in my late 40s and I just wanted to look less tired - not younger, just less exhausted. Monique understood exactly what I meant. I still look like myself. My husband noticed something was different but couldn't say what. That's exactly what I wanted."</p>
+        <div class="testimonial-rule"></div>
+        <p class="testimonial-name">Alison D.</p>
+        <p class="testimonial-detail">Melbourne - Verified client</p>
+      </div>
+    </div>
+    <p style="text-align:center;font-size:.72rem;color:var(--text-pale);font-weight:300;margin-top:2rem;font-style:italic;">Note: Testimonials are illustrative placeholders for demo purposes. Replace with Monique's verified Google/Facebook reviews.</p>
+  </div>
+</section>
+
+<!-- MAIN CTA -->
+<section class="cta-section" id="book-consult">
+  <div class="cta-overlay"></div>
+  <div class="cta-inner">
+    <span class="cta-kicker">The First Step is Free</span>
+    <h2 class="cta-title">Book Your Free<br><em>Virtual Consultation</em></h2>
+    <p class="cta-text">
+      15 minutes. No cost. No commitment. Just an honest conversation about
+      what you're hoping for and whether Monique is the right fit for you.
+      Most clients say they wished they'd booked sooner.
+    </p>
+    <a href="https://www.timelybooking.com" class="cta-btn">Book Free Virtual Consult</a>
+    <p class="cta-note">Tuesdays + Thursdays + selected Saturdays - Melbourne</p>
+    <p class="cta-also">Or book an in-person consultation - <a href="https://www.timelybooking.com">$50 redeemable deposit &rarr;</a></p>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section">
+  <div class="faq-inner">
+    <div class="section-header">
+      <span class="section-kicker">Common Questions</span>
+      <h2 class="section-title">About the <em>Consultation</em></h2>
+    </div>
+    <div class="faq-list">
+
+      <div class="faq-item open">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          What happens in the free virtual consultation?
+          <svg class="faq-q-icon" viewBox="0 0 24 24">
+            <line x1="12" y1="5" x2="12" y2="19"/>
+            <line class="plus-line-h" x1="5" y1="12" x2="19" y2="12"/>
+          </svg>
+        </div>
+        <p class="faq-a">It's a 15-minute conversation - phone or video, whichever you prefer. We talk about what you're thinking about, what your concerns are, and whether an in-person consultation makes sense. There's no pressure to proceed and no obligation to book anything afterwards. It's genuinely just a chat.</p>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          How is the $50 consultation deposit used?
+          <svg class="faq-q-icon" viewBox="0 0 24 24">
+            <line x1="12" y1="5" x2="12" y2="19"/>
+            <line class="plus-line-h" x1="5" y1="12" x2="19" y2="12"/>
+          </svg>
+        </div>
+        <p class="faq-a">The $50 is applied in full to any treatment you choose on the day of your in-person consultation. If you decide not to proceed with treatment after the consultation, the $50 covers the consultation itself. Either way, it's not a hidden fee - it's a way of ensuring the time is used well for both of us.</p>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          What if I don't know what I want?
+          <svg class="faq-q-icon" viewBox="0 0 24 24">
+            <line x1="12" y1="5" x2="12" y2="19"/>
+            <line class="plus-line-h" x1="5" y1="12" x2="19" y2="12"/>
+          </svg>
+        </div>
+        <p class="faq-a">That's completely fine - it's actually quite common. Come with a general sense of what's been bothering you (feeling tired, a feature you've noticed changing, a photo that surprised you) and we'll work through the specifics together. You don't need to arrive with a treatment plan in mind.</p>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          Can I come in for a consultation and decide not to proceed?
+          <svg class="faq-q-icon" viewBox="0 0 24 24">
+            <line x1="12" y1="5" x2="12" y2="19"/>
+            <line class="plus-line-h" x1="5" y1="12" x2="19" y2="12"/>
+          </svg>
+        </div>
+        <p class="faq-a">Absolutely. You'll receive a full recommendation and pricing at the end of the in-person consultation, and you're under no obligation to proceed on the day. Some clients like to think about it, talk to a partner, or simply wait until they feel ready. That's completely respected.</p>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          Where is the clinic located?
+          <svg class="faq-q-icon" viewBox="0 0 24 24">
+            <line x1="12" y1="5" x2="12" y2="19"/>
+            <line class="plus-line-h" x1="5" y1="12" x2="19" y2="12"/>
+          </svg>
+        </div>
+        <p class="faq-a">Monique works from a shared clinic space in Melbourne. The exact address is shared when your appointment is confirmed via Timely. The clinic is shared with other practitioners - each running their own independent practice.</p>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          What days are appointments available?
+          <svg class="faq-q-icon" viewBox="0 0 24 24">
+            <line x1="12" y1="5" x2="12" y2="19"/>
+            <line class="plus-line-h" x1="5" y1="12" x2="19" y2="12"/>
+          </svg>
+        </div>
+        <p class="faq-a">In-person appointments are available Tuesdays 9am - 5pm and Thursdays 10am - 8pm, plus selected Saturdays (usually the last Saturday of each month with occasional extras). Virtual consultations are more flexible - check current availability when booking.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- BOTTOM CTA STRIP -->
+<div class="bottom-strip">
+  <p class="bottom-strip-title">Ready to start? <em>The first conversation is free.</em></p>
+  <a href="#book-consult" class="bottom-strip-btn">Book Your Free Virtual Consultation</a>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <p class="footer-name">Monique Radatti <span>RN</span></p>
+      <p style="font-size:.7rem;color:rgba(255,255,255,.25);font-weight:300;margin-top:.3rem;">Cosmetic Nurse - Melbourne, Victoria</p>
+    </div>
+    <nav class="footer-links">
+      <a href="#consult">Free Consult</a>
+      <a href="#how-it-works">How It Works</a>
+      <a href="#book-consult">Book Now</a>
+    </nav>
+    <p class="footer-note">This page is a demonstration concept prepared by Clinic Catalyst. Testimonials are illustrative placeholders. All content is AHPRA-compliant in design - no injectable substances named, no before-and-after imagery, consultation-led approach throughout.</p>
+  </div>
+</footer>
+
+<script>
+function toggleFaq(el) {
+  var item = el.closest('.faq-item');
+  var isOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(function(i){ i.classList.remove('open'); });
+  if (!isOpen) item.classList.add('open');
+}
+</script>
+
+</body>
+</html>
